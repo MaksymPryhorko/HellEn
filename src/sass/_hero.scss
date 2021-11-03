@@ -1,0 +1,259 @@
+.hero__shadow {
+  padding-bottom: 77px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/hero/gradient-table.png);
+  background-position: left -64px bottom 0px;
+
+  @media screen and(min-width:$tablet) {
+    background-position: left 0px bottom 0px;
+    background-image: url(../images/hero/gradient.png);
+  }
+
+  @media screen and(min-width:$desktop) {
+    padding-bottom: 107px;
+  }
+}
+
+// .hero .container {
+//   @media screen and(min-width:$tablet) {
+//     padding: 0px 18px 0px 40px;
+//   }
+// }
+
+.hero__position {
+  position: relative;
+  @media screen and(min-width:$tablet) {
+    display: flex;
+  }
+  @media screen and(min-width:$desktop) {
+    padding-bottom: 115px;
+  }
+}
+
+.hero__container {
+  @media screen and(min-width:$mobile-min) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and(min-width:$tablet) {
+    align-items: flex-start;
+  }
+}
+.hero__title {
+  margin: 0px;
+  padding: 0px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 30px;
+  @media screen and(min-width:$tablet) {
+    max-width: 332px;
+    font-size: 26px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    max-width: 642px;
+    font-size: 58px;
+    margin-bottom: 24px;
+  }
+}
+
+.hero__desc {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0px;
+  padding: 0px;
+
+  @media screen and(min-width:$desktop) {
+    font-size: 20px;
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    @media screen and(min-width:$mobile-min) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width:$desktop) {
+      flex-direction: row;
+      line-height: 164.9%;
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+  }
+
+  &--text {
+    font-weight: 500;
+    color: $secondary-text-color;
+  }
+
+  &--topic {
+    font-weight: bold;
+    color: $dark-background-color;
+  }
+
+  &--label {
+    font-weight: bold;
+    color: $accent-color;
+
+    @media screen and(min-width:$desktop) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.hero__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 48px;
+  margin-bottom: 30px;
+  color: $inverse-text-color;
+  background-color: $accent-color;
+  text-decoration: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  border: none;
+
+  @media screen and(min-width:$desktop) {
+    width: 354px;
+    height: 70px;
+    padding: 27px 25px 26px 26px;
+    margin-bottom: 0px;
+    font-size: 14px;
+  }
+  &:hover,
+  :focus {
+    border: 2px solid $accent-color;
+    background-color: #fff;
+    color: $accent-color;
+    transition: color 250ms $timing-function, background-color 250ms $timing-function;
+  }
+}
+
+.hero__thumb {
+  width: 210px;
+  height: 178px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and(min-width:$tablet) {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    width: 376px;
+    height: 320px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: 670px;
+    height: 572px;
+  }
+}
+
+.hero__img {
+  position: absolute;
+  width: 178px;
+  top: 0px;
+  left: 20px;
+
+  object-position: 67% 50%;
+  animation-name: im1-an;
+  animation-duration: 4000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  &--opacity {
+    position: absolute;
+    width: 208px;
+    top: 10px;
+    left: 0px;
+
+    object-position: 50% 32%;
+    opacity: 0;
+    animation-name: im2-an;
+    animation-duration: 4000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @media screen and(min-width:$tablet) {
+    width: 321px;
+    height: 320px;
+    top: 0px;
+    right: 19px;
+    left: auto;
+
+    &--opacity {
+      width: 376px;
+      height: 269px;
+      top: 17px;
+      right: 0px;
+      left: auto;
+    }
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: 573px;
+    height: 572px;
+    top: 0px;
+    right: 33px;
+    &--opacity {
+      width: 670px;
+      height: 480px;
+      top: 30px;
+      right: 0px;
+      left: auto;
+    }
+  }
+}
+
+@keyframes im1-an {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes im2-an {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
